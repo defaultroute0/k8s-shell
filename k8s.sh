@@ -14,6 +14,7 @@ echo "alias kdel='kubectl delete --force'" >> ~/.bashrc
 echo "alias ke='kubectl edit'" >> ~/.bashrc
 echo "alias kr='kubectl run'" >> ~/.bashrc
 echo "alias kei='kubectl exec -it'" >> ~/.bashrc
+# kubectl exec -it demo-pod -- /bin/sh
 export do="--dry-run=client -oyaml"
 #
 echo "alias km='kubectl config use-context tkgm-mgmt-admin@tkgm-mgmt'" >> ~/.bashrc
