@@ -1,17 +1,20 @@
 
 #!/bin/bash
+source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
+echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
 alias k=kubectl
-source <(kubectl completion bash)
-complete -F __start_kubectl k
+complete -o default -F __start_kubectl k
+#
 echo "alias k='kubectl'" >> ~/.bashrc
-echo "alias ke='kubectl exec -it'" >> ~/.bashrc
 echo "alias kg='kubectl get'" >> ~/.bashrc
-echo "alias kgi='kubectl get ingress'" >> ~/.bashrc
-echo "alias kga='kubectl get all'" >> ~/.bashrc
+echo "alias kd='kubectl describe'" >> ~/.bashrc
 echo "alias kaf='kubectl apply -f'" >> ~/.bashrc
-echo "alias kdf='kubectl delete -f'" >> ~/.bashrc
-echo "alias kd='kubectl delete'" >> ~/.bashrc
-echo "alias kdc='kubectl describe'" >> ~/.bashrc
+echo "alias kc='kubectl create'" >> ~/.bashrc
+echo "alias kdel='kubectl delete --force'" >> ~/.bashrc
+echo "alias ke='kubectl edit'" >> ~/.bashrc
+echo "alias kr='kubectl run'" >> ~/.bashrc
+echo "alias kei='kubectl exec -it'" >> ~/.bashrc
+export do="--dry-run=client -oyaml"
 #
 echo "alias km='kubectl config use-context tkgm-mgmt-admin@tkgm-mgmt'" >> ~/.bashrc
 echo "alias k1='kubectl config use-context tkgm-guest1-admin@tkgm-guest1'" >> ~/.bashrc
