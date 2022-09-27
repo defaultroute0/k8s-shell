@@ -1,4 +1,4 @@
-
+##### curl -L https://raw.githubusercontent.com/defaultroute0/k8s-shell/main/k8s.sh  | bash
 #!/bin/bash
 source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package should be installed first.
 echo "source <(kubectl completion bash)" >> ~/.bashrc # add autocomplete permanently to your bash shell.
