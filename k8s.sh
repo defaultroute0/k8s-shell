@@ -14,13 +14,13 @@ echo "alias kdel='kubectl delete --force'" >> ~/.bashrc
 echo "alias ke='kubectl edit'" >> ~/.bashrc
 echo "alias kr='kubectl run'" >> ~/.bashrc
 echo "alias kei='kubectl exec -it'" >> ~/.bashrc
-# kubectl exec -it demo-pod -- /bin/sh
-export do="--dry-run=client -oyaml"
+#kubectl exec -it demo-pod -- /bin/sh
+#export do="--dry-run=client -oyaml"
 #
-echo "alias km='kubectl config use-context tkgm-mgmt-admin@tkgm-mgmt'" >> ~/.bashrc
-echo "alias k1='kubectl config use-context tkgm-guest1-admin@tkgm-guest1'" >> ~/.bashrc
-echo "alias k2='kubectl config use-context tkgm-guest2-admin@tkgm-guest2'" >> ~/.bashrc
-echo "alias k3='kubectl config use-context tkgm-guest3-admin@tkgm-guest3'" >> ~/.bashrc
+#echo "alias km='kubectl config use-context tkgm-mgmt-admin@tkgm-mgmt'" >> ~/.bashrc
+#echo "alias k1='kubectl config use-context tkgm-guest1-admin@tkgm-guest1'" >> ~/.bashrc
+#echo "alias k2='kubectl config use-context tkgm-guest2-admin@tkgm-guest2'" >> ~/.bashrc
+#echo "alias k3='kubectl config use-context tkgm-guest3-admin@tkgm-guest3'" >> ~/.bashrc
 #
 echo "export do='--dry-run=client -oyaml'" >> ~/.bashrc
 echo "export now='--grace-period=0 --force'" >> ~/.bashrc
